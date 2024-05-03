@@ -9,7 +9,7 @@ import gaming from 'assets/images/gaming.png';
 export const Gaming = () => {
   return (
     <StyledGrid id="Gaming" container justifyContent="center" alignItems="center">
-      <Grid item xs={4}>
+      <Grid item xs={10} md={4}>
         <Typography variant="h4" sx={{ paddingBottom: '16px'}}>
           Gaming
         </Typography>
@@ -21,7 +21,7 @@ export const Gaming = () => {
           Chat Now
         </Button>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={10} md={5}>
         <img src={gaming} className={classes.screen} />
       </Grid>
 
@@ -31,8 +31,9 @@ export const Gaming = () => {
 
 const classes = generateUtilityClasses('Gaming', ['screen']);
 
-const StyledGrid = styled(Grid)(() => ({
+const StyledGrid = styled(Grid)(({ theme }) => ({
   minHeight: '100vh',
+  padding: theme.spacing(5, 0),
   position: 'relative',
   backgroundImage: `url(${bgGaming})`,
   backgroundRepeat: 'no-repeat',
@@ -40,6 +41,11 @@ const StyledGrid = styled(Grid)(() => ({
   [`& .${classes.screen}`]: {
     width: '65%',
     float: 'right',
+    [theme.breakpoints.down('mobile')]: {
+      float: 'none',
+      width: '100%',
+      marginTop: theme.spacing(5),
+    },
   },
   [`& .MuiTypography-root`]: {
     textShadow: '2px 2px 40px black',

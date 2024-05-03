@@ -57,6 +57,9 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
   top: 0,
   left: 0,
   zIndex: 10,
+  [theme.breakpoints.down('mobile')]: {
+    padding: theme.spacing(0, 2),
+  },
   '& a': {
     textDecoration: 'none',
   },

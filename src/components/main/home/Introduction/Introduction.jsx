@@ -40,6 +40,9 @@ const Styled = styled('div')(({ theme }) => ({
   backgroundImage: `url(${bgIntro})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
+  [theme.breakpoints.down('mobile')]: {
+    backgroundSize: '100% 100%',
+  },
 
   [`& .${classes.bg}`]: {
     position: 'absolute',
@@ -48,34 +51,46 @@ const Styled = styled('div')(({ theme }) => ({
     backgroundImage: `url(${logoBg})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '50%',
-    backgroundPosition: 'bottom left',
+    backgroundPosition: 'left bottom',
     zIndex: 1,
-  },
-  [`& .${classes.screen}`]: {
-    position: 'absolute',
-    bottom: '90px',
-    right: '30%',
-    zIndex: 1,
-    [`& img`]: {
-      width: '275px',
-      borderRadius: '10px',
-      overflow: 'hidden',
-      boxShadow: '10px 13px 19px 0px rgba(0,0,0,0.17)',
+    [theme.breakpoints.down('mobile')]: {
+      backgroundPosition: '-100px bottom',
+      backgroundSize: '135%',
     },
   },
+  // [`& .${classes.screen}`]: {
+  //   position: 'absolute',
+  //   bottom: '90px',
+  //   right: '30%',
+  //   zIndex: 1,
+  //   [`& img`]: {
+  //     width: '275px',
+  //     borderRadius: '10px',
+  //     overflow: 'hidden',
+  //     boxShadow: '10px 13px 19px 0px rgba(0,0,0,0.17)',
+  //   },
+  // },
   [`& .${classes.wrap}`]: {
     paddingTop: theme.spacing(20),
     textAlign: 'right',
     position: 'relative',
     paddingRight: '10%',
     zIndex: 2,
+    [theme.breakpoints.down('mobile')]: {
+      paddingTop: theme.spacing(15),
+    },
   },
   [`& .${classes.btn}`]: {
     padding: '12.5px 35px',
     backgroundColor: '#1853ff',
   },
   [`& .${classes.textWrap}`]: {
-    marginBottom: '40px'
+    marginBottom: '40px',
+    [`& .MuiTypography-h1`]: {
+      [theme.breakpoints.down('mobile')]: {
+        fontSize: 50,
+      },
+    },
   },
   [`& .${classes.message}`]: {
     borderRadius: 20,

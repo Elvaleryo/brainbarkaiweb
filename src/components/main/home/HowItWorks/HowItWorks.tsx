@@ -9,7 +9,7 @@ import screenHow from 'assets/images/screen-how.png';
 export const HowItWorks = () => {
   return (
     <StyledGrid id="howItWorks" container justifyContent="center" alignItems="center">
-      <Grid item xs={4}>
+      <Grid item xs={10} md={4}>
         <Typography variant="h4" sx={{ paddingBottom: '16px'}}>
           Personalized NFT Dog
         </Typography>
@@ -26,7 +26,7 @@ export const HowItWorks = () => {
           Chat Now
         </Button>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={10} md={4}>
         <img src={screenHow} className={classes.screen} />
       </Grid>
 
@@ -36,8 +36,9 @@ export const HowItWorks = () => {
 
 const classes = generateUtilityClasses('HowItWorks', ['screen']);
 
-const StyledGrid = styled(Grid)(() => ({
+const StyledGrid = styled(Grid)(({ theme }) => ({
   minHeight: '100vh',
+  padding: theme.spacing(5, 0),
   position: 'relative',
   backgroundImage: `url(${bgHow})`,
   backgroundRepeat: 'no-repeat',
@@ -45,6 +46,11 @@ const StyledGrid = styled(Grid)(() => ({
   [`& .${classes.screen}`]: {
     width: '65%',
     float: 'right',
+    [theme.breakpoints.down('mobile')]: {
+      float: 'none',
+      width: '100%',
+      marginTop: theme.spacing(5),
+    },
   },
   [`& .MuiTypography-root`]: {
     textShadow: '2px 2px 40px black',

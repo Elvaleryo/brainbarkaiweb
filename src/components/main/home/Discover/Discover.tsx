@@ -1,13 +1,11 @@
 import { styled } from '@mui/material/styles';
 import {Button, Grid, Typography} from '@mui/material';
 import generateUtilityClasses from '@mui/material/generateUtilityClasses';
-// @ts-ignore
-import whowe from 'assets/images/whowe.png';
 
 export const Discover = () => {
   return (
     <StyledGrid id="Discover" container justifyContent="center" alignItems="center" flexDirection="column">
-      <Grid item xs={5}>
+      <Grid item xs={10} md={5}>
         <Typography variant="h4" sx={{ paddingBottom: '16px'}}>
           Discover BrainBarkAI,
         </Typography>
