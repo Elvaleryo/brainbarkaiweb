@@ -55,7 +55,7 @@ const Styled = styled('div')(({ theme }) => ({
     zIndex: 1,
     [theme.breakpoints.down('mobile')]: {
       backgroundPosition: '-100px bottom',
-      backgroundSize: '135%',
+      backgroundSize: '100%',
     },
   },
   // [`& .${classes.screen}`]: {
