@@ -1,13 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.1cd51ecd.js",
+    "main.js": "/static/js/main.a0d70134.js",
+    "static/media/brain-dog.png": "/static/media/brain-dog.d6ad7602f60ad71e6dee.png",
+    "static/media/logo-bg.png": "/static/media/logo-bg.30b0b93292fa57bb2e10.png",
+    "static/media/gaming.png": "/static/media/gaming.75e0a440b001a7a220fa.png",
+    "static/media/screen-how.png": "/static/media/screen-how.0e0bb562a56df9356aef.png",
+    "static/media/logo.png": "/static/media/logo.5102f411a1e5df21b32f.png",
+    "static/media/screen-interactive.png": "/static/media/screen-interactive.da6acbd73b33bf6f3776.png",
+    "static/media/bg-gaming.jpg": "/static/media/bg-gaming.4422bfedc640d9c4b010.jpg",
+    "static/media/bg-how.jpg": "/static/media/bg-how.60e8a748a8fe89b9e3a5.jpg",
+    "static/media/bg-intro.jpg": "/static/media/bg-intro.06dbfd50aac437e35468.jpg",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.1cd51ecd.js.map": "/static/js/main.1cd51ecd.js.map"
+    "main.a0d70134.js.map": "/static/js/main.a0d70134.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.1cd51ecd.js"
+    "static/js/main.a0d70134.js"
   ]
 }
